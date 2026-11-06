@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — wip-backup</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    max-width: 760px;
+    margin: 3rem auto;
+    padding: 0 1.25rem;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+  .meta { color: #666; font-size: .95rem; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+  a { color: #0b5cad; }
+  code { background: #f2f2f2; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; font-size: .9rem; color: #666; border-top: 1px solid #ddd; padding-top: 1rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #16181c; }
+    .meta, footer { color: #a0a0a0; }
+    a { color: #7ab7ff; }
+    code { background: #24272c; }
+    footer { border-color: #333; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Política de privacidad</h1>
+<p class="meta">Aplicación: <strong>wip-backup</strong> · Última actualización: noviembre de 2026</p>
+
+<h2>1. Quién opera la aplicación</h2>
+<p>
+  <strong>wip-backup</strong> es una herramienta personal operada por un único
+  usuario, que es a la vez el dueño de la cuenta de Google utilizada. No es un
+  servicio ofrecido al público y no tiene usuarios registrados.
+  Contacto: <a href="mailto:TU-CORREO@ejemplo.com">TU-CORREO@ejemplo.com</a>.
+</p>
+
+<h2>2. Qué datos se utilizan</h2>
+<ul>
+  <li>
+    <strong>Archivos de los proyectos del operador:</strong> solo aquellos que el
+    operador modifica en su computadora, excluyendo dependencias, archivos
+    compilados y archivos de configuración con credenciales.
+  </li>
+  <li>
+    <strong>Autorización de Google:</strong> un token OAuth emitido por Google al
+    autorizar la aplicación, con el permiso
+    <code>https://www.googleapis.com/auth/drive</code>.
+  </li>
+</ul>
+<p>
+  La aplicación <strong>no</strong> accede a contactos, correo electrónico, calendario,
+  fotos, ubicación ni a ningún otro dato de la cuenta. No utiliza analítica, cookies de
+  seguimiento ni publicidad.
+</p>
+
+<h2>3. Dónde se almacenan</h2>
+<p>
+  Los archivos se guardan en una carpeta privada del propio Google Drive de la cuenta
+  autorizada, bajo la ruta <code>wip-backup/</code>. El token de autorización se guarda
+  únicamente en la computadora del operador, en el archivo de configuración local de la
+  herramienta. No existe ningún servidor propio ni base de datos intermedia.
+</p>
+
+<h2>4. Con quién se comparten</h2>
+<p>
+  Con nadie. Los datos no se venden, no se ceden ni se comparten con terceros. No hay
+  proveedores externos de analítica ni de publicidad. La transferencia se realiza
+  directamente entre la computadora del operador y los servidores de Google, sobre
+  conexiones cifradas (HTTPS).
+</p>
+
+<h2>5. Cuánto tiempo se conservan</h2>
+<p>
+  Los archivos permanecen en la carpeta <code>wip-backup/</code> hasta que el operador
+  los elimina. La herramienta borra del respaldo los archivos que ya fueron confirmados
+  en el repositorio de código, de modo que la carpeta solo conserva trabajo pendiente.
+</p>
+
+<h2>6. Cómo revocar el acceso y borrar los datos</h2>
+<ul>
+  <li>
+    Revocar el permiso: en
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+    seleccionar la aplicación y quitar el acceso.
+  </li>
+  <li>
+    Borrar los datos: eliminar la carpeta <code>wip-backup</code> desde Google Drive, o
+    vaciar la papelera de Drive.
+  </li>
+  <li>
+    Borrar el token local: eliminar el archivo de configuración de la herramienta en la
+    computadora del operador.
+  </li>
+</ul>
+
+<h2>7. Seguridad</h2>
+<p>
+  La autorización se realiza mediante el flujo OAuth 2.0 de Google. La aplicación nunca
+  ve ni almacena la contraseña de la cuenta de Google. El token de acceso se renueva
+  automáticamente y puede revocarse en cualquier momento desde la cuenta de Google.
+</p>
+
+<h2>8. Cambios en esta política</h2>
+<p>
+  Cualquier cambio se publicará en esta misma página, actualizando la fecha indicada al
+  comienzo.
+</p>
+
+<footer>
+  wip-backup · <a href="./index.html">Inicio</a>
+</footer>
+
+</body>
+</html>
